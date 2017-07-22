@@ -1,0 +1,71 @@
+---
+layout: post
+title: pgAdmin4 ?
+category: posts
+---
+
+[pgAdmin4][pgAdmin] is an opensource postgres GUI tool to manage multiple postgresql servers. [Jekyll][jekyll].
+
+### It allows to perform various operations such as:###
+
+* Create Server group/Server/Database/Schema/Tables so on...
+* Edit/Update database objects.
+* Drop/Delete/Drop cascade database objects.
+* Refresh Object.
+
+### Features of pgAdmin4:###
+
+
+1. Fast: <br/>With every new release, pgAdmin4 is becoming fast and work seamlessly. Now even on windows loading pgAdmin4 takes 5-6 seconds.
+
+
+2. Browser Tree: <br/>It is backbone of pgAdmin4. It is a tree of various database objects such as Sever groups, Servers, Schema and its child nodes.
+Various operations such as edit properties, refresh, drop and various tools such as
+Grant wizard, Backup/Restore database, Maintenance, Query tool, Reload configurations
+are easily accessible with Context Menu and File Menus.
+
+
+3. Query Tool & Edit Grid:
+
+   * Write and execute long queries.
+   * View large data of tables or views in just fraction of seconds.
+   * An easy access to History tab which displays list of queries executed during the session.
+   * Load and Save queries written in query tool with custom FileManager.
+   * Add new rows, update table rows, delete rows instantaneously.
+   * Support of excel like features such as:
+      * Select single cell
+      * Select columns/rows more than one
+      * Select all rows with just a single click irrespective of number of table rows.
+   * Quick access to query menu items such as execute query, comment/uncomment queries, find/replace in editor.
+   * Graphical plan for queries executed.
+   * Powerful debugger with rich features that supports debugging pl/pgsql functions.
+
+
+4. Multiple platform support:
+
+   * Windows
+   * Linux
+   * Mac OSx
+
+
+5. Databases Support: <br/>It supports only PostgreSql 9.2 and above. it runs on Postgresql 9.2 below but only few things will work.
+
+
+6. Reverse Engineering of database objects: <br/>It provides SQL of selected database object in SQL panel.
+
+
+7. Support Desktop and Server Mode.
+
+
+8. Keyboard shortcuts:
+  It supports an easy to access to various actions with keyboard shortcuts.
+  List of [keyboard shortcuts][kbdsts] available
+
+
+---
+If you have any questions, ask me on [email][address] id
+
+[jekyll]: https://github.com/mojombo/jekyll
+[pgAdmin]: https://www.pgadmin.org
+[kbdsts]: https://www.pgadmin.org/docs/pgadmin4/dev/keyboard_shortcuts.html
+[address]: imsurinder90@gmail.com
