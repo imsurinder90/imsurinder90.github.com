@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Setup pgAdmin4 on Ubuntu in Server mode
-category: posts
+category: pgAdmin4
+comments: true
 ---
 
 ### Steps by step instructions:
@@ -88,8 +89,3 @@ python pgAdmin4.py
 Thats it. Now you have setup pgAdmin4.
 
 ---
-
-[jekyll]: https://github.com/mojombo/jekyll
-[zh]: http://zachholman.com
-[left]: https://github.com/holman/left#readme
-[twitter]: https://twitter.com/holman

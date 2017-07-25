@@ -1,7 +1,8 @@
 ---
 layout: post
 title: pgAdmin4 ?
-category: posts
+category: pgAdmin4
+comments: true
 ---
 
 [pgAdmin4][pgAdmin] is an opensource postgres GUI tool to manage multiple postgresql servers.
@@ -67,9 +68,6 @@ It provides SQL of selected database object in SQL panel.
 
 
 ---
-If you have any questions, ask me on [email][address] id
 
-[jekyll]: https://github.com/mojombo/jekyll
 [pgAdmin]: https://www.pgadmin.org
 [kbdsts]: https://www.pgadmin.org/docs/pgadmin4/dev/keyboard_shortcuts.html
-[address]: imsurinder90@gmail.com

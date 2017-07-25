@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Setup pgAdmin4 on Ubuntu in Desktop mode
-category: posts
+category: pgAdmin4
+comments: true
 ---
 
 In this tutorial we will be using Qt-5.5.1 with webkit and assuming you have setup pgAdmin4 in server mode by following tutorial
@@ -70,7 +71,4 @@ That's it. Now enjoy pgAdmin4 in Desktop mode.
 
 ---
 
-[jekyll]: https://github.com/mojombo/jekyll
 [download_link]: https://download.qt.io/archive/qt/5.5/5.5.1/
-[left]: https://github.com/holman/left#readme
-[twitter]: https://twitter.com/holman
