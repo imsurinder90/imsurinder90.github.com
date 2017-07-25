@@ -13,10 +13,11 @@ Contributions are Welcome!
 
 You should have a server up and running locally at <http://localhost:4000>.
 
-## Customization
+## Steps to change post content:
 
-Folder layout:
+Project layout:
 
+````
 ├── _config.yml
 ├── _includes
 │   ├── head.html
@@ -72,8 +73,7 @@ Folder layout:
 │   └── application.js
 └── script
     └── server
-
-## If you want to change post content:
+````
 
 1. Open post you want to change in `_posts/` directory with your favourite editor.
 
@@ -81,15 +81,15 @@ Folder layout:
 
 3. Set Remote Url to repository Url.
 
-`git remote set-url origin https://github.com/imsurinder90/imsurinder90.github.com.git`
+  <pre>git remote set-url origin https://github.com/imsurinder90/imsurinder90.github.com.git</pre>
 
 4. Stash the changes you made:
 
-`git add filename1 filename2`
+  <pre>git add filename1 filename2</pre>
 
 4. Commit and push the changes.
 
-`git commit -m "Add description of changes"`
+  <pre>git commit -m "Add description of changes"</pre>
 
 4. `git push`
 
