@@ -4,7 +4,7 @@ title: pgAdmin4 ?
 category: posts
 ---
 
-[pgAdmin4][pgAdmin] is an opensource postgres GUI tool to manage multiple postgresql servers. [Jekyll][jekyll].
+[pgAdmin4][pgAdmin] is an opensource postgres GUI tool to manage multiple postgresql servers.
 
 ### It allows to perform various operations such as:###
 
@@ -16,10 +16,12 @@ category: posts
 ### Features of pgAdmin4:###
 
 
-1. Fast: <br/>With every new release, pgAdmin4 is becoming fast and work seamlessly. Now even on windows loading pgAdmin4 takes 5-6 seconds.
+1. Runs Fast:
+With every new release, pgAdmin4 is becoming fast and work seamlessly. Now even on windows loading pgAdmin4 takes 5-6 seconds.
 
 
-2. Browser Tree: <br/>It is backbone of pgAdmin4. It is a tree of various database objects such as Sever groups, Servers, Schema and its child nodes.
+2. Browser Tree:
+It is backbone of pgAdmin4. It is a tree of various database objects such as Sever groups, Servers, Schema and its child nodes.
 Various operations such as edit properties, refresh, drop and various tools such as
 Grant wizard, Backup/Restore database, Maintenance, Query tool, Reload configurations
 are easily accessible with Context Menu and File Menus.
@@ -48,10 +50,12 @@ are easily accessible with Context Menu and File Menus.
    * Mac OSx
 
 
-5. Databases Support: <br/>It supports only PostgreSql 9.2 and above. it runs on Postgresql 9.2 below but only few things will work.
+5. Databases Support:
+It supports only PostgreSql 9.2 and above. it runs on Postgresql 9.2 below but only few things will work.
 
 
-6. Reverse Engineering of database objects: <br/>It provides SQL of selected database object in SQL panel.
+6. Reverse Engineering of database objects:
+It provides SQL of selected database object in SQL panel.
 
 
 7. Support Desktop and Server Mode.

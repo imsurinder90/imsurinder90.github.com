@@ -1,20 +1,13 @@
-# Left
+# My personal blog
 
-Left is a clean, whitespace-happy layout for [Jekyll](https://github.com/mojombo/jekyll).
+This blog is using [Left](https://github.com/holman/left/fork) theme based on [Jekyll](https://github.com/mojombo/jekyll).
 
-This is designed to be an easy layout to modify for your own blog. It was
-extracted from [zachholman.com](http://zachholman.com/), which means it was
-battle-hardened from years of posting serious blog posts about emoji and swear
-words.
+## Setup
 
-You can see it live right here: <http://zachholman.com/left/>
+Contributions are Welcome!
 
-![Left](http://cl.ly/image/3S2r1p2C0E2B/content)
-
-## Installation
-
-- [Fork this repository](https://github.com/holman/left/fork)
-- Clone it: `git clone https://github.com/YOUR-USER/left`
+- [Fork this repository](https://github.com/imsurinder90/imsurinder90.github.com.git)
+- Clone it: `git clone https://github.com/imsurinder90/imsurinder90.github.com.git`
 - Install ruby things: `bundle install` (if this doesn't work, look into [installing Bundler](http://bundler.io))
 - Start it up: `script/server`
 
@@ -22,39 +15,86 @@ You should have a server up and running locally at <http://localhost:4000>.
 
 ## Customization
 
-Next you'll want to change a few things. Most of them can be changed directly in
-[_config.yml](https://github.com/holman/left/blob/gh-pages/_config.yml). That's
-where we'll pull your name, Twitter username, and things like that.
+Folder layout:
 
-There's a few other places that you'll want to change, too:
+├── _config.yml
+├── _includes
+│   ├── head.html
+│   └── sidebar.html
+├── _layouts
+│   ├── layout.html
+│   └── post.html
+├── _posts
+│   ├── 2017-07-22-pgAdmin4?.markdown
+│   ├── 2017-07-22-setup_pgAdmin4_in_desktop_mode.markdown
+│   └── 2017-07-22-setup_pgAdmin4_in_server_mode.markdown
+├── _site
+│   ├── 404.html
+│   ├── CNAME
+│   ├── Gemfile
+│   ├── Gemfile.lock
+│   ├── LICENSE
+│   ├── README.md
+│   ├── about.html
+│   ├── apple-touch-icon.png
+│   ├── atom.xml
+│   ├── css
+│   │   ├── base.css
+│   │   ├── mobile.css
+│   │   └── pygments.css
+│   ├── favicon.ico
+│   ├── images
+│   │   ├── hr.png
+│   │   └── profile_pic.png
+│   ├── index.html
+│   ├── js
+│   │   └── application.js
+│   ├── posts
+│   │   ├── pgAdmin4.html
+│   │   ├── setup_pgAdmin4_in_desktop_mode.html
+│   │   └── setup_pgAdmin4_in_server_mode.html
+│   ├── script
+│   │   └── server
+│   └── sitemap.xml
+├── about.html
+├── apple-touch-icon.png
+├── atom.xml
+├── css
+│   ├── base.scss
+│   ├── mobile.scss
+│   └── pygments.css
+├── favicon.ico
+├── images
+│   ├── hr.png
+│   └── profile_pic.png
+├── index.html
+├── js
+│   └── application.js
+└── script
+    └── server
 
-- [CNAME](https://github.com/holman/left/blob/gh-pages/CNAME): If you're using
-  this on GitHub Pages with a custom domain name, you'll want to change this
-  to be the domain you're going to use. All that should be in here is a
-  domain name on the first line and nothing else (like: `example.com`).
-- [favicon.ico](https://github.com/holman/left/blob/gh-pages/favicon.ico): This
-  is a smaller version of my gravatar for use as the icon in your browser's
-  address bar. You should change it to whatever you'd like.
-- [apple-touch-icon.png](https://github.com/holman/left/blob/gh-pages/apple-touch-icon.png):
-  Again, this is my gravatar, and it shows up in iOS and various other apps
-  that use this file as an "icon" for your site.
+## If you want to change post content:
 
-## Deployment
+1. Open post you want to change in `_posts/` directory with your favourite editor.
 
-Left is designed to be deployed to [GitHub Pages](http://pages.github.com). It
-uses [repository metadata](https://help.github.com/articles/repository-metadata-on-github-pages)
-to generate some of your content, like your GitHub URL and avatar information (so you
-might not actually see it locally until you push it up to Pages).
+2. Save and close file after making changes in files.
 
-All you should have to do is rename your repository on GitHub to be
-`username.github.com`. Since everything is on the `gh-pages` branch, you
-should be able to see your new site at <http://username.github.io>.
+3. Set Remote Url to repository Url.
+
+`git remote set-url origin https://github.com/imsurinder90/imsurinder90.github.com.git`
+
+4. Stash the changes you made:
+
+`git add filename1 filename2`
+
+4. Commit and push the changes.
+
+`git commit -m "Add description of changes"`
+
+4. `git push`
 
 ## Licensing
 
-This is [MIT](https://github.com/holman/left/blob/gh-pages/LICENSE) with no
-added caveats, so feel free to use this on your site without linking back to
-me or using a disclaimer or anything silly like that.
+[MIT](http://www.opensource.org/licenses/mit-license.php) License
 
-If you'd like give me credit somewhere on your blog or tweet a shout out to
-[@holman](https://twitter.com/holman), well hey, I'll take it.
+© 2017 Surinder Kumar (imsurinder90@gmail.com)
