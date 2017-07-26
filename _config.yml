@@ -28,10 +28,12 @@ kramdown:
 gems:
   - jekyll-sitemap
 
+disqus:
+    shortname: https-imsurinder90-github-io
+future: false
+
+timezone: Asia/Kolkata
+
 name: Surinder Kumar
 url:  https://github.com/imsurinder90/imsurinder90.github.com
 description: My Personal blog
-disqus:
-    shortname: https-imsurinder90-github-io
-future: true
-timezone: Asia/Kolkata

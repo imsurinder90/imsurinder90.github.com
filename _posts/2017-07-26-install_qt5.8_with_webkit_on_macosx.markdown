@@ -1,0 +1,75 @@
+---
+layout: post
+title: Setup runtime dev environment on Mac OS X with Qt5.8 and annulen QtWebkit-58
+category: posts
+---
+
+[pgAdmin4-1.6][pgadmin4_download_link] is shipped with Qt5.8 and annulen QtWebkit-58. So we will be installing
+first Qt5.8 and then moving annulen QtWebkit-58 to Qt5.8 source.
+
+### Step by step instructions:
+
+* Setup pgAdmin4 first if you have not setup yet, Follow previous tutorials.
+* Download [Qt5.8.0][download_link] version from from Qt website
+* Install the downloaded setup.
+
+To run Qt5.8 with annulen [QtWebkit-58][download_annulen_webkit], download its tar.gz file and extract it, then move files in `include`, `lib` and `mkspecs` to `Qt5.8/installation` directory:
+
+* Move `~/Downloads/qtwebkit-tp5-qt58-darwin-x64/includes/QtWebKit` to `/Users/pc-name/Qt5.8.0/5.8/clang_64/include/`
+
+* Move `~/Downloads/qtwebkit-tp5-qt58-darwin-x64/includes/QtWebKitWidgets` to `/Users/pc-name/Qt5.8.0/5.8/clang_64/include/`
+
+* Move `~/Downloads/qtwebkit-tp5-qt58-darwin-x64/lib/cmake/QtWebKit & QtWebKitWidgets to `/Users/Qt5.8_install_location/lib/cmake/`
+
+* Move all file types (.a, .prl) to `/Users/Qt5.8_install_location/lib/`
+
+* Move `lib/pkgconfig/*.pc` to `/Users/Qt5.8_install_location/lib/pkgconfig/`
+
+* Move `mkspecs/modules/*.pri` to `/Users/Qt5.8_install_location/mkspecs/`
+
+### Compile runtime with Qt5.8
+
+``` html
+# Run `which python` to know activated virtual env python version. (assuming virtual environment is activated)
+output: /home/surinder/virtualenvs/p27/bin/python
+
+# set PYTHONPATH on terminal
+export PYTHONPATH=$PYTHONPATH:/home/surinder/virtualenvs/p27/lib/python2.7/site-packages/
+
+# change directory to runtime folder
+cd runtime
+
+# Compile and create Makefile
+/Users/surinder/Qt5.8.0/5.8/clang_64/bin/qmake -o Makefile pgAdmin4.pro "DEFINES += PGADMIN4_USE_WEBKIT"
+
+# run make
+make
+````
+
+Note: If you got linking error while make, edit Makefile and replace line: 39 with this:
+
+````
+LIBS          = $(SUBLIBS) -F/Users/surinder/Qt5.8.0/5.8/clang_64/lib -ldl
+-framework CoreFoundation -lpython2.7 -framework QtWebKitWidgets
+-framework QtWidgets -framework QtGui -framework QtCore -framework DiskArbitration -framework IOKit
+-framework QtWebKit -framework QtNetwork -framework OpenGL -framework AGL
+````
+
+then `run make` again.
+
+### Now run pgAdmin4 in Desktop mode
+`./pgAdmin4.app/Contents/MacOS/pgAdmin4`
+
+If you still got error `ImportError: No module named backports`
+
+Just create an empty `__init__.py` into backports package.
+`touch /Users/surinder/Documents/Workspaces/pgAdmin_27/lib/python2.7/site-packages/backports/__init__.py`
+
+Now the issue will be resolved and pgAdmin4 will run in Desktop mode.
+
+Note: Make sure to create `config_local.py` and set `SERVER_MODE` to `FALSE` to enable pgAdmin4 in desktop mode.
+
+---
+[pgadmin4_download_link]: https://www.pgadmin.org/download/
+[download_link]: https://download.qt.io/official_releases/qt/5.8/5.8.0/
+[download_annulen_webkit]: https://github.com/annulen/webkit/releases/tag/qtwebkit-tp5
