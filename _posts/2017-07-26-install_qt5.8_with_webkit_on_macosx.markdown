@@ -2,6 +2,7 @@
 layout: post
 title: Setup runtime dev environment on Mac OS X with Qt5.8 and annulen QtWebkit-58
 category: posts
+comments: true
 ---
 
 [pgAdmin4-1.6][pgadmin4_download_link] is shipped with Qt5.8 and annulen QtWebkit-58. So we will be installing
