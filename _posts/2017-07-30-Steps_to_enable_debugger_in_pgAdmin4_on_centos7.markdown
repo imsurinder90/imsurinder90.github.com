@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Steps to enable debugger in pgAdmin4 on Centos 7 ?
+title: Steps to enable debugger in pgAdmin4 on Centos 7
 category: pgAdmin4
 comments: true
 ---
