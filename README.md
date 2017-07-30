@@ -93,6 +93,10 @@ Project layout:
 
 4. `git push`
 
+5. Go to your repository and click `new pull request` button and send PR.
+
+6. If PR looks good, it will be commited to the repository.
+
 ## Licensing
 
 [MIT](http://www.opensource.org/licenses/mit-license.php) License
