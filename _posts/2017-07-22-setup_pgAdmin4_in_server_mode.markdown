@@ -71,7 +71,7 @@ Now we have installed all prerequisites for pgAdmin4.
 ``` html
 create a directory named "~/Documents/pgAdmin4" and cd to it.
 
-git pull https://git.postgresql.org/git/pgadmin4.git/ ./
+git clone https://git.postgresql.org/git/pgadmin4.git/ ./
 
 # Activate virtual env if not activated
 workon pgAdmin_27
