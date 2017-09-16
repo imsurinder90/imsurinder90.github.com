@@ -53,7 +53,7 @@ $ sudo apachectl status
 # To enable apache httpd autostart at boot
 $ sudo systemctl enable httpd
 ```
-
+{% comment %}
 ### Modify pgadmin/web/pgAdmin4.wsgi file and replace with below content
 ```
 import os
@@ -71,13 +71,15 @@ if sys.path[0] != root:
 
 from pgAdmin4 import app as application
 ```
+{% endcomment %}
 
 ### Add apache conf file for pgAdmin4
 Create a new file `pgadmin4.conf` inside `/etc/httpd/conf.d/` directory with file contents
 
 ```
 <virtualhost *:80>
-    WSGIDaemonProcess pgadmin user=surinder group=surinder threads=5 home=/home/surinder/dev/pgadmin4/web
+    WSGIDaemonProcess pgadmin user=surinder group=surinder threads=5 home=/home/surinder/dev/pgadmin4/web \
+        python-path=/home/surinder/venv/py27/:/home/surinder/venv/py27/lib/python2.7/site-packages/
     WSGIScriptAlias /pgadmin /home/surinder/dev/pgadmin4/web/pgAdmin4.wsgi
     <directory /home/surinder/dev/pgadmin4/web>
         WSGIProcessGroup pgadmin
@@ -95,7 +97,8 @@ Create a new file `pgadmin4.conf` inside `/etc/httpd/conf.d/` directory with fil
   - **WSGIScriptAlias pgadmin/** - the url path after *http://localhost/{pgadmin/}*, where pgAdmin4 will load
   it can be any subpath like, 'pgadmin/pgadmin/' and access like *http://localhost/pgadmin/pgadmin/*
   - **WSGIScriptAlias _/home/surinder/dev/pgadmin4/web/pgAdmin4.wsgi_** - path to pgAdmin4 wsgi file where
-  pgAdmin4 virtualenv is activated first when loaded and python path and app path is added to environment.
+    flask application is started by apache server.
+  - **python-path** - The path to the Python's virtual environment. 
 
 Give appropriate permissions to the user directory:
 `$ chmod 755 /home/surinder/`
