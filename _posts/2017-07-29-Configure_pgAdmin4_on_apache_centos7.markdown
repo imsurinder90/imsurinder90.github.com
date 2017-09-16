@@ -97,6 +97,8 @@ Create a new file `pgadmin4.conf` inside `/etc/httpd/conf.d/` directory with fil
   - **WSGIScriptAlias _/home/surinder/dev/pgadmin4/web/pgAdmin4.wsgi_** - path to pgAdmin4 wsgi file where
   pgAdmin4 virtualenv is activated first when loaded and python path and app path is added to environment.
 
+Change the ownership of user directory:
+`$ chmod 755 /home/surinder/`
 
 Restart apache service, run `sudo apachectl restart`
 
