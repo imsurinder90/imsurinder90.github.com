@@ -97,7 +97,7 @@ Create a new file `pgadmin4.conf` inside `/etc/httpd/conf.d/` directory with fil
   - **WSGIScriptAlias _/home/surinder/dev/pgadmin4/web/pgAdmin4.wsgi_** - path to pgAdmin4 wsgi file where
   pgAdmin4 virtualenv is activated first when loaded and python path and app path is added to environment.
 
-Change the ownership of user directory:
+Give appropriate permissions to the user directory:
 `$ chmod 755 /home/surinder/`
 
 Restart apache service, run `sudo apachectl restart`
@@ -108,6 +108,9 @@ Restart apache service, run `sudo apachectl restart`
 $ sudo grep httpd /var/log/audit/audit.log | audit2allow -M mypol
 $ sudo semodule -i mypol.pp
 ```
+If above doesn't works, edit the file `/etc/sysconfig/selinux` and set `SELINUX=disabled`
+
+Also, restart machine, otherwise it will display 500 internal server error.
 
 
 ### Create virtual environment
