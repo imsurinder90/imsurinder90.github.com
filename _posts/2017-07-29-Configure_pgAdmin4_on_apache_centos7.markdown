@@ -202,6 +202,17 @@ $ yarn run bundle
 then force run yarn install to resolve this:
 `$ yarn install --force`
 
+or try install package which fails, for example:
+
+```
+# pgquant package failed while running yarn install
+$ npm install pngquant
+
+# Now run yarn install and yarn run bundle
+$ yarn install
+$ yarn run bundle
+```
+
 Restart apache service, run `sudo apachectl restart` to run pgAdmin4 server and
 open url `http://localhost/pgadmin` to browse pgAdmin4.
 
