@@ -8,6 +8,9 @@ comments: true
 ### Steps to configure pgAdmin4 using apache with mod_wsgi
 
 ```
+# Install python27-devel package which is the dependency for pycrypto module
+$ sudo yum install python-devel.x86_64
+
 # To get additional packages, we will enable EPEL repository, You can do that easily by typing:
 $ sudo yum install epel-release
 
